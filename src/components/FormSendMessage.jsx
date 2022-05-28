@@ -27,8 +27,14 @@ const FormSendMessage = (props) => {
 
   return (
     <div className="form-send-message">
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="text" value={text} onChange={handleChange} />
+      <form className="form-box" onSubmit={handleSubmit}>
+        <input
+          className="input"
+          type="text"
+          name="text"
+          value={text}
+          onChange={handleChange}
+        />
         <button type="submit">Send</button>
       </form>
     </div>

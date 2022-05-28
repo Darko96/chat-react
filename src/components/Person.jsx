@@ -25,10 +25,12 @@ const Person = (props) => {
 
   return (
     <div className={active ? "person active" : "person"} onClick={handleClick}>
-      <div>{item.name}</div>
-      <div>{item.status}</div>
       <div className="avatar">
         <img src={item.picture_data.src} alt={item.picture_data.alt} />
+      </div>
+      <div className="name-box">
+        <div>{item.name}</div>
+        <div>{item.status}</div>
       </div>
     </div>
   );
