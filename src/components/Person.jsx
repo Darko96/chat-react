@@ -9,7 +9,7 @@ const Person = (props) => {
   const item = props.item;
 
   let active = false;
-  if (selectedConversation && item.name === selectedConversation.name) {
+  if (selectedConversation && item.name === selectedConversation) {
     // this conversation
     active = true;
   }
@@ -19,7 +19,7 @@ const Person = (props) => {
     // redux action je u formatu standard flux action https://github.com/redux-utilities/flux-standard-action
     dispatch({
       type: "CLICK_ON_PERSON",
-      payload: item,
+      payload: item.name,
     });
   };
 

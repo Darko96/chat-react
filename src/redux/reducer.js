@@ -1,4 +1,5 @@
 import conversation from "../json/conversation.json";
+import { createNewMessageInConversation } from "../utils/conversation-utils";
 
 const initialState = {
   nesto: "blabla",
@@ -13,6 +14,16 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         selectedConversation: action.payload,
+      };
+
+    case "SEND_MESSAGE":
+      return {
+        ...state,
+        conversation: createNewMessageInConversation(
+          state.conversation,
+          action.payload.text,
+          action.payload.to
+        ),
       };
 
     default:
