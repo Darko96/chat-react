@@ -26,7 +26,7 @@ const Conversation = () => {
 
   let jsx = null;
   if (singleConversation) {
-    console.log(singleConversation);
+    // console.log(singleConversation);
     const sortedMessages = sortMessagesByTimestamp(singleConversation.messages);
     jsx = (
       <>

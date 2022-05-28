@@ -9,12 +9,12 @@ export const filterSingleConversation = (conversation, name) => {
 };
 
 export const createNewMessageInConversation = (conversation, text, to) => {
-  const timestamp = Date.now();
+  const timestamp_seconds = Date.now() / 1000;
   let updated_conversations = [];
   conversation.forEach((item) => {
     if (item.name === to) {
       const new_message = {
-        time: timestamp,
+        time: timestamp_seconds,
         content: text,
         type: "sent",
       };
