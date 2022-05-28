@@ -1,4 +1,5 @@
 import "./App.css";
+import Conversation from "./Conversation";
 import Sidebar from "./Sidebar";
 
 const App = () => {
@@ -6,6 +7,7 @@ const App = () => {
     <div className="App">
       ovo je app
       <Sidebar />
+      <Conversation />
     </div>
   );
 };

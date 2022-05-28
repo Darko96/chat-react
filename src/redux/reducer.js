@@ -4,10 +4,20 @@ const initialState = {
   nesto: "blabla",
   drugo: 2222,
   conversation: conversation,
+  selectedConversation: null,
 };
 
 const rootReducer = (state = initialState, action) => {
-  return state;
+  switch (action.type) {
+    case "CLICK_ON_PERSON":
+      return {
+        ...state,
+        selectedConversation: action.payload,
+      };
+
+    default:
+      return state;
+  }
 };
 
 export default rootReducer;
