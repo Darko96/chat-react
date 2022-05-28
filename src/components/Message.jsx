@@ -1,6 +1,7 @@
 const Message = (props) => {
   const content = props.message.content;
-  return <div>{content}</div>;
+  const msgType = props.message.type;
+  return <div className={"message " + msgType}>{content}</div>;
 };
 
 export default Message;

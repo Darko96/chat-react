@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.message {
+  font-size: 20px;
+  width: 200px;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: aquamarine;
+  margin: 0px;
+}
+.message.sent {
+  /* reight side */
+  background-color: aquamarine;
+  margin-left: auto;
+}
+.message.received {
+  /* left side */
+  background-color: aquamarine;
+  margin-left: right;
+}
