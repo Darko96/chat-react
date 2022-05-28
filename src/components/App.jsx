@@ -1,15 +1,12 @@
 import "./App.css";
-import Conversation from "./Conversation";
-import Sidebar from "./Sidebar";
+import ChatApp from "./ChatApp";
 
 const App = () => {
   return (
     <div className="App">
       ovo je app
-      <div className="layout">
-        <Sidebar />
-        <Conversation />
-      </div>
+      <i className="fa-brands fa-facebook"></i>
+      <ChatApp />
     </div>
   );
 };
