@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { sortMessagesByTimestamp } from "../utils/time-utils";
 import Message from "./Message";
 
 const Conversation = () => {
@@ -6,9 +7,11 @@ const Conversation = () => {
     (state) => state.selectedConversation
   );
 
+  const sortedMessages = sortMessagesByTimestamp(selectedConversation.messages);
+
   let jsx = null;
   if (selectedConversation) {
-    jsx = selectedConversation.messages.map((item, index) => {
+    jsx = sortedMessages.map((item, index) => {
       return <Message key={index} message={item} />;
     });
   } else {

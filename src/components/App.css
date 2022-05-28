@@ -37,6 +37,28 @@
   }
 }
 
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  overflow: hidden;
+}
+.avatar img {
+  height: 100%;
+  width: auto;
+}
+
+.person {
+  font-size: 20px;
+  width: 200px;
+  border-radius: 1em;
+  background-color: rgb(157, 111, 180);
+}
+.person.active,
+.person:hover {
+  background-color: rgb(189, 158, 204);
+}
+
 .message {
   font-size: 20px;
   width: 200px;
