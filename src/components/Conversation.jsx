@@ -1,16 +1,21 @@
 import { useSelector } from "react-redux";
+import Message from "./Message";
 
 const Conversation = () => {
   const selectedConversation = useSelector(
     (state) => state.selectedConversation
   );
 
-  let message = "Please select chat to start conversation";
+  let jsx = null;
   if (selectedConversation) {
-    message = null;
+    jsx = selectedConversation.messages.map((item, index) => {
+      return <Message key={index} message={item} />;
+    });
+  } else {
+    jsx = "Please select chat to start conversation";
   }
 
-  return <div>{message}</div>;
+  return <div>{jsx}</div>;
 };
 
 export default Conversation;

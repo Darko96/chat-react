@@ -10,7 +10,7 @@ const Person = (props) => {
     // redux action je u formatu standard flux action https://github.com/redux-utilities/flux-standard-action
     dispatch({
       type: "CLICK_ON_PERSON",
-      payload: item.name,
+      payload: item,
     });
   };
 
