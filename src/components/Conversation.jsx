@@ -39,7 +39,12 @@ const Conversation = () => {
       </>
     );
   } else {
-    jsx = "Please select chat to start conversation";
+    jsx = (
+      <span className="start-conversation">
+        Please select chat to start conversation
+      </span>
+    );
+    // jsx = "Please select chat to start conversation";
   }
 
   return <div className="message-area">{jsx}</div>;

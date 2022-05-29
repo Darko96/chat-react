@@ -26,11 +26,15 @@ const Person = (props) => {
   return (
     <div className={active ? "person active" : "person"} onClick={handleClick}>
       <div className="avatar">
-        <img src={item.picture_data.src} alt={item.picture_data.alt} />
+        <img
+          className="person-img"
+          src={item.picture_data.src}
+          alt={item.picture_data.alt}
+        />
       </div>
       <div className="name-box">
-        <div>{item.name}</div>
-        <div>{item.status}</div>
+        <div className="person-name">{item.name}</div>
+        <div className="person-status">{item.status}</div>
       </div>
     </div>
   );

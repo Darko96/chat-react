@@ -20,11 +20,14 @@ const App = () => {
 
       <div className="footer">
         <div className="footer-container">
-          <img
-            src="./assets/images/logo_netconomy_neu_weisz.png"
-            alt="Fylo logo"
-            class="footer-logo"
-          />
+          <div className="logo-box">
+            <img
+              src="./assets/images/logo_netconomy_neu_weisz.png"
+              alt="Fylo logo"
+              class="footer-logo"
+            />
+          </div>
+
           <div className="footer-box">
             <div className="footer-links-box">
               <ul className="footer-links">
@@ -65,15 +68,21 @@ const App = () => {
                 </li>
               </ul>
             </div>
+          </div>
+          <div className="copyright-social-media-box">
+            <p className="copyright">© 2022 NETCONOMY</p>
             <div className="social-media-box">
-              <a href="https://www.facebook.com/" className="facebook-icon">
+              <a href="#" className="facebook-icon">
                 <i className="fa-brands fa-facebook-f"></i>
               </a>
-              <a href="https://twitter.com/?lang=en">
+              <a href="#">
+                <i className="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="#">
                 <i className="fa-brands fa-twitter"></i>
               </a>
-              <a href="https://www.instagram.com/">
-                <i className="fa-brands fa-instagram"></i>
+              <a href="#">
+                <i className="fa-brands fa-xing"></i>
               </a>
             </div>
           </div>
@@ -84,3 +93,4 @@ const App = () => {
 };
 
 export default App;
+<i class="fa-brands fa-linkedin-in"></i>;

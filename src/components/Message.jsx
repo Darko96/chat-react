@@ -6,8 +6,8 @@ const Message = (props) => {
   const time = convertTimestamptToTime(props.message.time);
   return (
     <div className={"message " + msgType}>
-      <div>{content}</div>
-      <div>{time}</div>
+      <div className="message-content">{content}</div>
+      <div className="message-time">{time}</div>
     </div>
   );
 };

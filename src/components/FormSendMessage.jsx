@@ -21,7 +21,7 @@ const FormSendMessage = (props) => {
         text: text,
       },
     });
-    // after submit, cear message filed
+    // after submit, clear message filed
     setText("");
   };
 
@@ -35,7 +35,9 @@ const FormSendMessage = (props) => {
           value={text}
           onChange={handleChange}
         />
-        <button type="submit">Send</button>
+        <button className="btn-send" type="submit">
+          Send
+        </button>
       </form>
     </div>
   );
