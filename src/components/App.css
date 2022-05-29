@@ -221,9 +221,8 @@ img {
 
 .start-conversation {
   position: relative;
-  top: 25rem;
   font-size: 1.6rem;
-  margin: 0 auto;
+  margin: auto;
   padding: 1.2rem 2rem;
   background-color: #0080c1;
   width: 35rem;
@@ -234,6 +233,7 @@ img {
 .layout .message-area .message-list {
   overflow-y: auto;
   padding: 3rem;
+  background-color: rgba(255, 255, 255, 0.67);
 }
 
 .layout .message-area .form-send-message {
@@ -290,6 +290,7 @@ img {
 /* ********* CONVERSATION SECTION ********* */
 
 .message {
+  position: relative;
   font-size: 1.4rem;
   max-width: 20rem;
   /* width: 20rem; */
@@ -307,17 +308,46 @@ img {
   font-size: 1.2rem;
 }
 
+.message .triangle {
+  display: none;
+}
+
 .message.sent {
   background-color: #0080c1;
   margin-left: auto;
   margin-bottom: 1rem;
+  text-align: right;
+  border-bottom-right-radius: 0px;
+}
+.message.sent .triangle {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 15px solid #0080c1;
+  border-left: 15px solid transparent;
+  position: absolute;
+  bottom: -15px;
+  right: -2px;
+  transform: skew(15deg);
 }
 
 .message.received {
   background-color: #4eacdb;
-
-  margin-left: right;
+  margin-right: auto;
   margin-bottom: 1rem;
+  text-align: left;
+  border-bottom-left-radius: 0px;
+}
+.message.received .triangle {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 15px solid #4eacdb;
+  border-right: 15px solid transparent;
+  position: absolute;
+  bottom: -15px;
+  left: -2px;
+  transform: skew(-15deg);
 }
 
 .form-send-message {
@@ -341,6 +371,12 @@ img {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   border: none;
+  padding: 10px;
+  font-size: 1.1rem;
+}
+.input:focus,
+.btn-send:focus {
+  outline: none;
 }
 
 .btn-send {

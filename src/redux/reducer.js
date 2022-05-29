@@ -2,8 +2,6 @@ import conversation from "../json/conversation.json";
 import { createNewMessageInConversation } from "../utils/conversation-utils";
 
 const initialState = {
-  nesto: "blabla",
-  drugo: 2222,
   conversation: conversation,
   selectedConversation: null,
 };

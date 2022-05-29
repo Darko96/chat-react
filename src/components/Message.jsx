@@ -8,6 +8,7 @@ const Message = (props) => {
     <div className={"message " + msgType}>
       <div className="message-content">{content}</div>
       <div className="message-time">{time}</div>
+      <div className="triangle"></div>
     </div>
   );
 };
